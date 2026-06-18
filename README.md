@@ -6,6 +6,8 @@
 - **Email ID:** jeelgor10@gmail.com
 
 ---
+## Video Explanation: https://drive.google.com/file/d/1mIjMHNrmadbpYQDJvKTa5UK_9fMpO23J/view?usp=sharing
+---
 
 ## Approach
 My goal for this assignment was to faithfully recreate the Insight.IO dashboard while ensuring the application felt like a real, performant piece of robotics software rather than just a static webpage. I started by breaking the provided design down into modular components (Sidebars, Top HUD, etc.) and placing them in a floating overlay. Once the layout was pixel-perfect, my primary focus shifted to performance: ensuring that the heavy media elements—the live camera feed and the 3D LiDAR point cloud—could run simultaneously without tanking the browser's frame rate or crashing. 
