@@ -1,0 +1,223 @@
+.topHudContainer {
+  position: absolute;
+  top: 24px;
+  left: 104px; /* offset sidebar (80px) + 24px padding */
+  right: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  z-index: 20;
+}
+
+.topLeft, .topCenter, .topRight {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* TOP LEFT */
+.statusPill {
+  background: white;
+  border-radius: 30px;
+  padding: 8px 8px 8px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.statusLabel {
+  color: #64748b;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.statusText {
+  color: #0f172a;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-right: 8px;
+}
+
+.pauseBtn {
+  width: 32px;
+  height: 32px;
+  background-color: #0b1120;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.quickGoalBtn, .initiateBtn {
+  background: white;
+  border: none;
+  border-radius: 30px;
+  padding: 6px 6px 6px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: fit-content;
+}
+
+.btnText {
+  color: #0f172a;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.arrowCircle {
+  width: 28px;
+  height: 28px;
+  background-color: #0b1120;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* TOP CENTER */
+.topCenter {
+  align-items: center;
+  gap: 0;
+}
+
+.metricsBar {
+  background-color: #0b1120;
+  border-radius: 30px;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.metricItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #94a3b8;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.metricItem span {
+  color: #ffffff;
+}
+
+.statusValue {
+  color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+  .topHudContainer {
+    left: 4px;
+    top: 4px;
+    right: 4px;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+  .topLeft, .topRight {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 6px;
+  }
+  .topCenter {
+    width: 100%;
+  }
+  .statusPill, .quickGoalBtn, .initiateBtn, .modeTogglePill {
+    padding: 4px 8px;
+    gap: 4px;
+  }
+  .btnText, .statusText, .statusLabel, .modeLabel, .modeOption {
+    font-size: 0.65rem;
+  }
+  .pauseBtn, .arrowCircle {
+    width: 16px;
+    height: 16px;
+  }
+  .metricsBar {
+    width: 100%;
+    padding: 4px;
+    gap: 4px;
+    justify-content: space-evenly;
+  }
+  .metricItem {
+    font-size: 0.6rem;
+    gap: 2px;
+  }
+  .viewTab {
+    font-size: 0.6rem;
+    padding: 4px 8px;
+  }
+}
+
+.metricItem > span:first-child {
+  color: #94a3b8;
+}
+
+.greenDot {
+  width: 8px;
+  height: 8px;
+  background-color: #22c55e;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #22c55e;
+}
+
+.viewTab {
+  background-color: rgba(11, 17, 32, 0.8);
+  color: #e2e8f0;
+  padding: 6px 16px;
+  border-radius: 0 0 12px 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* TOP RIGHT */
+.topRight {
+  align-items: flex-end;
+}
+
+.modeTogglePill {
+  background: white;
+  border-radius: 30px;
+  padding: 6px 6px 6px 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.modeLabel {
+  color: #64748b;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.modeSwitch {
+  display: flex;
+  background-color: #f1f5f9;
+  border-radius: 20px;
+  padding: 4px;
+}
+
+.modeOption {
+  padding: 6px 16px;
+  border-radius: 16px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #64748b;
+  cursor: pointer;
+}
+
+.modeOption.activeMode {
+  background-color: #0b1120;
+  color: #ffffff;
+}
